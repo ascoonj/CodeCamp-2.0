@@ -5,7 +5,7 @@ const Home = (props) =>{
 	return (
 		<div>
 			<h1>You should only see this if you are logged in!</h1>
-			<p>{props.auth.username}</p>
+			<p>Welcome {props.auth.username?props.auth.username:"Guest"}</p>
 			<button onClick = {props.handleLogout}>Log Out</button>
 		</div>
 	);

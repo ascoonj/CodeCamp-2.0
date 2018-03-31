@@ -4,8 +4,9 @@ module.exports = function (passport) {
 
 
 	router.use("/auth",require("./authRoutes.js")(passport));
-	router.use("/api",require("./apiRoutes.js")(passport));
+	// router.use("/api",require("./apiRoutes.js")(passport));
 	//add more routes here
+	router.use("/api",require("./api")(passport));
 	
 
 	// If no API routes are hit, send the React app

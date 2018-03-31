@@ -10,7 +10,7 @@ module.exports = function (passport) {
 				username: req.user.username,
 				isAuthenticated: true
 			});
-			//you can also pass up any other fields you with to expose
+			//you can also pass up any other fields you wish to expose
 			//for example, 
 			//nickname: req.user.nickname
 		} else {
@@ -28,6 +28,7 @@ module.exports = function (passport) {
 			if (err){ return res.json(err.message); }
 			res.json({
 				userId: user._id,
+				reg_type: user.reg_type,
 				username: user.username,
 				isAuthenticated: true
 			});
@@ -38,6 +39,7 @@ module.exports = function (passport) {
 		// console.log(req.user);
 		res.json({
 			userId: req.user._id,
+			reg_type: req.user.reg_type,
 			username: req.user.username,
 			isAuthenticated: true
 		});
