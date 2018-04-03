@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import axios from 'axios';
 
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
+import Welcome from "./components/Welcome";
 
 class App extends Component {
   state = {
@@ -84,7 +86,14 @@ class App extends Component {
     return (
       <Router>
         <div>
-        <Route exact path = "/" render = {()=> {
+
+           <Route exact path = "/" render = {()=> {
+              return <Welcome/>
+          
+        }}/>
+
+
+        <Route exact path = "/other" render = {()=> {
           if(loggedIn){
             return <Redirect to = "/home" />
           } else{
