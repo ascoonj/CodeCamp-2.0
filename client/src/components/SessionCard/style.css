@@ -1,0 +1,24 @@
+.card {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right:-15px;
+    border-style: solid;
+    border-color: black;
+    background-color: rgba(181, 220, 235, 0.548)
+    
+}
+
+.card-body {
+    font-size: 13px;
+    padding-top: 0;
+}
+
+.card-title {
+    font-size: 17px;
+}
+
+.img {
+    width: 260px;
+    height: 260px;
+}

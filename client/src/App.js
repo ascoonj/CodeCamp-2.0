@@ -8,6 +8,9 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
 import Welcome from "./components/Welcome";
+import Main from "./components/Main";
+import NewSessionForm from "./components/NewSessionForm";
+
 
 class App extends Component {
   state = {
@@ -88,12 +91,29 @@ class App extends Component {
         <div>
 
            <Route exact path = "/" render = {()=> {
-              return <Welcome/>
+              return <Welcome auth={this.state.auth} />
           
         }}/>
 
+        <Route exact path = "/main" render = {()=> {
+              return <Main auth={this.state.auth} />
+          
+        }}/>
 
-        <Route exact path = "/other" render = {()=> {
+        {/* <Route exact path = "/other" render = {()=> {
+          if(loggedIn){
+            return <Redirect to = "/home" />
+          } else{
+            return <SignIn 
+              handleChange= {this.handleChange} 
+              handleSubmit = {this.handleSubmit}
+              email = {this.state.email}
+              password = {this.state.password}
+            />
+          } 
+        }}/> */}
+
+        <Route exact path = "/signin" render = {()=> {
           if(loggedIn){
             return <Redirect to = "/home" />
           } else{
@@ -125,6 +145,11 @@ class App extends Component {
           } 
         }
         }/>
+        <Route exact path = "/admin/addSession" render = {()=> {
+          return <NewSessionForm />
+        }
+        }/>
+
         </div>
       </Router>
     );

@@ -4,18 +4,29 @@ import {Link} from 'react-router-dom';
 
 const SignUp = (props)=> {
 	return (
-		<div>
-			<h1>SIGN UP</h1>
-			<Link to = "/" >Go to sign in</Link>
+		<div className = "mainDiv">
+		<div className = "formDiv">
+			<h1 className="signInHeading">Register to attend</h1>
+					<hr/>
+					<h3 className="signInHeading">and create your own schedule</h3>
+			
 			<form>
-				<label>Email</label><br/>
-				<input value = {props.username} onChange = {props.handleChange} name='username' type='email' placeholder = 'example@email.com'/>
-				<br />
-				<label>Password</label><br/>
-				<input name='password' type='password' value = {props.password} onChange = {props.handleChange} />
-				<br />
+			<div class="form-group">
+				{/* <label>Email</label><br/> */}
+				<input value = {props.username} onChange = {props.handleChange} className='form-control' name='username' type='email' placeholder = 'example@email.com'/>
+				
+			</div>
+			<div class="form-group">
+				{/* <label>Password</label><br/> */}
+				<input name='password' type='password' className='form-control' value = {props.password} onChange = {props.handleChange} placeholder = 'password' />
+				
+			</div>
 				<button type = 'submit' name = "/auth/signup" onClick = {props.handleSubmit}>Sign Up</button>
+				<hr/>
+						<p className="signInHeading"> or </p>
+						<Link to = "/" ><h4 className ="signInHeading">Log in here</h4></Link>
 			</form>
+		</div>
 		</div>
 	);
 }

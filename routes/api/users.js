@@ -9,6 +9,8 @@ module.exports = function (passport) {
 
     router.get('/:id', usersController.findUserById);
     // router.put('/:id', usersController.updateUser);
+
+    
     
 
 

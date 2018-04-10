@@ -1,18 +1,47 @@
 import React from "react";
-import Nav from "../Nav";
-import Jumbotron from "../Jumbotron";
-import SessionCard from "../SessionCard";
+import {Link} from 'react-router-dom';
+import Logo from "./images/codecamplogo2.JPG";
 
 import "./style.css";
 
-const Welcome = () =>{
+
+var sectionStyle = {
+	width: "100%",
+	height: "1000px",
+	backgroundImage: `url(${Logo})`,
+	backgroundSize: 'cover'
+  };
+  
+//   class Section extends Component {
+// 	render() {
+// 	  return (
+// 		<section style={ sectionStyle }>
+// 		</section>
+// 	  );
+// 	}
+//   }
+
+const Welcome = (props) =>{
 	return (
-		<div>
-			<Nav />
-			<Jumbotron>
-              <h1>Code Camp 2.0</h1>
-            </Jumbotron>
-    		<SessionCard />
+		// <div className="cover-container text-center d-flex h-1000 p-3 mx-auto flex-column" style= { sectionStyle }>
+			<div className= "main">
+				<div className="centred">
+					<img className="logoImg" src={ Logo }/>
+					<h2 className= "dateHeading"> March 17th, 2018 | Seminole State College </h2>
+					<span>
+						<Link to = "/main"> <button type="button" class="button">Learn More</button></Link>
+						<Link to = "/signup"><button type="button" class="button">Register</button></Link>
+						<Link to = "/signin"><button type="button" class="button">Log In</button></Link>
+					</span>
+				</div>
+				
+			
+
+			{/* <footer className="mastfoot mt-auto">
+				<div className="inner">
+				<p>Cover template .</p>
+				</div>
+			</footer> */}
 		</div>
 	);
 }

@@ -1,0 +1,48 @@
+
+
+.centred {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    /* border-bottom-style : solid;
+    border-width: 3px;
+    border-bottom-color:black;
+    margin: auto; */
+}
+
+.main {
+    background-color: #f5ee21;
+}
+
+.logoImg {
+    border-bottom-style : solid;
+    border-width: 3px;
+    border-bottom-color: rgb(59, 152, 189);
+}
+
+.dateHeading {
+    text-align: center;
+    margin: 30px;
+    padding-bottom: 40px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 46px;
+    color: #4299b6;
+    border-bottom-style : solid;
+    border-width: 3px;
+    border-bottom-color: rgb(59, 152, 189);
+
+}
+
+.centred button {
+    padding: 10px 95px;
+    margin: 30px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: white;
+    border-color: #4299b6;
+    background-color: #4299b6
+}
