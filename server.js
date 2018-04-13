@@ -28,9 +28,28 @@ app.use('/',routes);
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 //add mongo heroku uri
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://localhost/codecamp-2-development"
+// );
+
+
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/codecamp-2-development"
+  process.env.MONGODB_URI || "mongodb://localhost/codecamp-2-development",
+  {
+    useMongoClient: true
+  }
 );
+
+
+// var dbconnect = mongoose.connection;
+
+// dbconnect.on('error', function(err) {
+//     console.log("Mongoose error: ", err);
+// });
+
+// dbconnect.once('open', function() {
+//     console.log("Mongoose connection successful.");
+// });
 
 // Start the API server
 app.listen(PORT, function() {

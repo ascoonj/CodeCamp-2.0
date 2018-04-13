@@ -26,14 +26,10 @@ class SessionCard extends Component {
         console.log("handle submit clciked", this.props.auth.isAuthenticated)
         if(this.props.auth.isAuthenticated){
 
-            // axios.post(`/api/users/addToSchedule/${id}`)
             API.addSessionToSchedule(id, this.props.auth.userId)
             .then((results)=>{ 
                 console.log(results);
-                // this.setState({
-                //     student: results.data
-                // });
-                
+                      
             }).catch((err)=>{
                 console.log(err);
             });
