@@ -16,6 +16,9 @@ class App extends Component {
   state = {
     username: "",
     password: "",
+    reg_type: "",
+    last_name:"",
+    first_name:"",
     auth: {
       userId:"",
       username:"",
@@ -50,11 +53,17 @@ class App extends Component {
     //call a sign In function
     const newUser = {
       username: this.state.username,
-      password: this.state.password
+      password: this.state.password,
+      reg_type: this.state.reg_type,
+      last_name: this.state.last_name,
+      first_name: this.state.first_name
     };
     this.setState({
       username: "",
-      password: ""
+      password: "",
+      reg_type: "",
+      last_name:"",
+      first_name:"",
     }); 
     const {name} = event.target;
     axios.post(name, newUser).then((data) => {
@@ -115,25 +124,31 @@ class App extends Component {
 
         <Route exact path = "/signin" render = {()=> {
           if(loggedIn){
-            return <Redirect to = "/home" />
+            return <Redirect to = "/main" />
           } else{
             return <SignIn 
               handleChange= {this.handleChange} 
               handleSubmit = {this.handleSubmit}
-              email = {this.state.email}
+              username = {this.state.username}
               password = {this.state.password}
+              reg_type = {this.state.reg_type}
+              last_name= {this.state.last_name}
+              first_name= {this.state.first_name}
             />
           } 
         }}/>
         <Route exact path = "/signup" render = {()=> {
           if(loggedIn){
-            return <Redirect to = "/home" />
+            return <Redirect to = "/main" />
           } else{
             return <SignUp 
               handleChange= {this.handleChange} 
               handleSubmit = {this.handleSubmit}
-              email = {this.state.email}
+              username = {this.state.username}
               password = {this.state.password}
+              reg_type = {this.state.reg_type}
+              last_name= {this.state.last_name}
+              first_name= {this.state.first_name}
             />
           }  
         }}/>

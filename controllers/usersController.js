@@ -27,13 +27,44 @@ module.exports = {
         .findOneAndUpdate({ _id: req.params.id }, req.body)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
-    }
-    // updateUserSchedule: function (req, res) {
-        //user clicks a session to add it to schedule
-        //clicked session id = req.body._id
-        //clicked sessionTime? req.body.session_time ?
+    },
+    updateUserSchedule: function (req, res) {
+      // console.log(req.params);
+
+      // console.log("user: ", req);
+        // user clicks a session to add it to schedule
+        // clicked session id = req.body._id
+        // clicked sessionTime? req.body.session_time ?
         // logged in user's id = req.user._id
-        //e.g: if (user.schedule.[sessionTime])
+        // e.g: if (user.schedule.[sessionTime])
+        models.Session.findById(req.params.id)
+          .then( (clickedSession) => {
+            console.log("click session:", clickedSession)
+            const sessionTime = clickedSession.session_time;
+            const fieldName = `schedule.${sessionTime}`;
+
+            console.log("fieldBName:", fieldName);
+
+            console.log(req.body.userId)
+            return models.User
+            .findByIdAndUpdate(req.body.userId,{
+              $set:{
+                [fieldName] :req.params.id
+              }
+            },{new: true});
+          })
+          .then ( (updateduser) => {
+            res.json({
+              updateduser,
+              message: "Schedule updated"
+            })
+          })
+          .catch( (err) => {
+            res.json({
+              message: err.message
+            })
+          })
+     
         
-    // }
+    }
   };

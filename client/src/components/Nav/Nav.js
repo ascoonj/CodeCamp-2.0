@@ -1,17 +1,33 @@
 import React from "react";
+import MiniLogo from "./images/codecampminilogo.jpg";
 
 const Nav = () => (
-  <nav className="navbar navbar-inverse navbar-top">
+  <nav className="navbar navbar-light navbar-top" style={{ backgroundColor: "#f5ee21", height: "65px", marginRight: "-15px" }}>
     <div className="container-fluid">
       <div className="navbar-header">
-        <button type="button" className="collapsed navbar-toggle">
-          <span className="sr-only">Toggle navigation</span>
-          <span className="icon-bar" /> <span className="icon-bar" />
-          <span className="icon-bar" />
-        </button>
         <a href="/" className="navbar-brand">
-          Code Camp 2018
+          <img src = {MiniLogo}/>
+          
         </a>
+        
+        <div className = "navbar-collapse" >
+          <div className="navbar-nav" style={{ color: "black" }}>
+            <p className="nav-item nav-link" href="#">Home </p>
+            <a className="nav-item nav-link" href="#">Features</a>
+            <a className="nav-item nav-link" href="#">Pricing</a>
+            <a className="nav-item nav-link " href="#">Disabled</a>
+          </div>
+        </div>
+  
+
+
+
+
+
+
+
+     
+        
       </div>
     </div>
   </nav>

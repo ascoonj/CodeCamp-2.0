@@ -7,8 +7,8 @@ const SignUp = (props)=> {
 		<div className = "mainDiv">
 		<div className = "formDiv">
 			<h1 className="signInHeading">Register to attend</h1>
-					<hr/>
-					<h3 className="signInHeading">and create your own schedule</h3>
+			<hr/>
+			<h3 className="signInHeading">And create your own schedule</h3>
 			
 			<form>
 			<div class="form-group">
@@ -19,12 +19,24 @@ const SignUp = (props)=> {
 			<div class="form-group">
 				{/* <label>Password</label><br/> */}
 				<input name='password' type='password' className='form-control' value = {props.password} onChange = {props.handleChange} placeholder = 'password' />
-				
 			</div>
+			<div class="form-group">
+				{/* <label>Password</label><br/> */}
+				<input name='reg_type' type='text' className='form-control' value = {props.reg_type} onChange = {props.handleChange} placeholder = 'registration type' />
+			</div>
+			<div class="form-group">
+				{/* <label>Password</label><br/> */}
+				<input name='first_name' type='text' className='form-control' value = {props.first_name} onChange = {props.handleChange} placeholder = 'first name' />
+			</div>
+			<div class="form-group">
+				{/* <label>Password</label><br/> */}
+				<input name='last_name' type='text' className='form-control' value = {props.last_name} onChange = {props.handleChange} placeholder = 'last name' />
+			</div>
+
 				<button type = 'submit' name = "/auth/signup" onClick = {props.handleSubmit}>Sign Up</button>
 				<hr/>
 						<p className="signInHeading"> or </p>
-						<Link to = "/" ><h4 className ="signInHeading">Log in here</h4></Link>
+						<Link to = "/signin" ><h4 className ="signInHeading">Log in here</h4></Link>
 			</form>
 		</div>
 		</div>

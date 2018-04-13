@@ -20,6 +20,11 @@ export default {
   // Gets the user with the given id
   getOneUser: function(id) {
     return axios.get("/api/users/" + id);
+  },
+  // Add the clicked session to the logged in user's schedule
+  addSessionToSchedule: function(sessionId, userId) {
+    console.log("add Session", sessionId);
+    return axios.post("api/users/addToSchedule/" + sessionId,{userId});
   }
 
 //   // Deletes the book with the given id

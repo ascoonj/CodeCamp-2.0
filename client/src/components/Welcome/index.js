@@ -29,9 +29,9 @@ const Welcome = (props) =>{
 					<img className="logoImg" src={ Logo }/>
 					<h2 className= "dateHeading"> March 17th, 2018 | Seminole State College </h2>
 					<span>
-						<Link to = "/main"> <button type="button" class="button">Learn More</button></Link>
-						<Link to = "/signup"><button type="button" class="button">Register</button></Link>
-						<Link to = "/signin"><button type="button" class="button">Log In</button></Link>
+						<Link to = "/main"> <button type="button" className="button">Learn More</button></Link>
+						<Link to = "/signup"><button type="button" className="button">Register</button></Link>
+						<Link to = "/signin"><button type="button" className="button">Log In</button></Link>
 					</span>
 				</div>
 				

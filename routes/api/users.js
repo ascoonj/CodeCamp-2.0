@@ -8,7 +8,7 @@ module.exports = function (passport) {
     router.post('/',usersController.addNewUser);
 
     router.get('/:id', usersController.findUserById);
-    // router.put('/:id', usersController.updateUser);
+    router.post('/addToSchedule/:id', usersController.updateUserSchedule);
 
     
     
