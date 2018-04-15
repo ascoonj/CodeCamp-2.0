@@ -12,7 +12,13 @@ module.exports = {
     findUserById: function(req, res) {
       models.User
         .findById(req.params.id)
-        .populate("session")
+        .populate("schedule.09:00")
+        .populate("schedule.10:00")
+        .populate("schedule.11:00")
+        .populate("schedule.13:00")
+        .populate("schedule.14:00")
+        .populate("schedule.15:00")
+        .populate("schedule.16:00")
         .then(userObj => res.json(userObj))
         .catch(err => res.status(422).json(err));
     },
@@ -51,11 +57,18 @@ module.exports = {
               $set:{
                 [fieldName] :req.params.id
               }
-            },{new: true});
+            },{new: true})
+            .populate("schedule.09:00")
+            .populate("schedule.10:00")
+            .populate("schedule.11:00")
+            .populate("schedule.13:00")
+            .populate("schedule.14:00")
+            .populate("schedule.15:00")
+            .populate("schedule.16:00");
           })
-          .then ( (updateduser) => {
+          .then ( (updatedUser) => {
             res.json({
-              updateduser,
+              updatedUser,
               message: "Schedule updated"
             })
           })

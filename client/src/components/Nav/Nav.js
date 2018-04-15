@@ -5,10 +5,10 @@ const Nav = () => (
   <nav className="navbar navbar-light navbar-top" style={{ backgroundColor: "#f5ee21", height: "65px", marginRight: "-15px" }}>
     <div className="container-fluid">
       <div className="navbar-header">
-        <a href="/" className="navbar-brand">
-          <img src = {MiniLogo}/>
+        <button name="/" className="navbar-brand">
+          <img src = {MiniLogo} className="d-inline-block align-top" alt=""/>
           
-        </a>
+        </button>
         
         <div className = "navbar-collapse" >
           <div className="navbar-nav" style={{ color: "black" }}>
@@ -18,16 +18,7 @@ const Nav = () => (
             <a className="nav-item nav-link " href="#">Disabled</a>
           </div>
         </div>
-  
-
-
-
-
-
-
-
      
-        
       </div>
     </div>
   </nav>

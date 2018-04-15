@@ -11,24 +11,24 @@ const SignUp = (props)=> {
 			<h3 className="signInHeading">And create your own schedule</h3>
 			
 			<form>
-			<div class="form-group">
+			<div className="form-group">
 				{/* <label>Email</label><br/> */}
 				<input value = {props.username} onChange = {props.handleChange} className='form-control' name='username' type='email' placeholder = 'example@email.com'/>
 				
 			</div>
-			<div class="form-group">
+			<div className="form-group">
 				{/* <label>Password</label><br/> */}
 				<input name='password' type='password' className='form-control' value = {props.password} onChange = {props.handleChange} placeholder = 'password' />
 			</div>
-			<div class="form-group">
+			<div className="form-group">
 				{/* <label>Password</label><br/> */}
 				<input name='reg_type' type='text' className='form-control' value = {props.reg_type} onChange = {props.handleChange} placeholder = 'registration type' />
 			</div>
-			<div class="form-group">
+			<div className="form-group">
 				{/* <label>Password</label><br/> */}
 				<input name='first_name' type='text' className='form-control' value = {props.first_name} onChange = {props.handleChange} placeholder = 'first name' />
 			</div>
-			<div class="form-group">
+			<div className="form-group">
 				{/* <label>Password</label><br/> */}
 				<input name='last_name' type='text' className='form-control' value = {props.last_name} onChange = {props.handleChange} placeholder = 'last name' />
 			</div>

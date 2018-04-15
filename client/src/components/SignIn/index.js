@@ -15,11 +15,11 @@ const SignIn = (props)=> {
 					<h3 className="signInHeading">Log in to view your schedule</h3>
 					
 					<form>
-						<div class="form-group">
+						<div className="form-group">
 							{/* <label htmlFor ='username'>Email</label> */}
 							<input value = {props.username} onChange = {props.handleChange} className='form-control' name='username' type='email' placeholder = 'example@email.com'/>
 						</div>
-						<div class="form-group">
+						<div className="form-group">
 							{/* <label htmlFor= "password">Password</label> */}
 							<input name='password' type='password' className='form-control' value = {props.password} onChange = {props.handleChange} placeholder = 'password' />
 						</div>
