@@ -70,7 +70,7 @@ render () {
 							? <UserScheduleItem auth={this.props.auth} session_time ={sessionTime} session_name={blankSession.title}/>
 							: (this.state.schedule[sessionTime])
 							? <UserScheduleItem auth={this.props.auth} session_time ={sessionTime} session_name={this.state.schedule[sessionTime].session_name} key={this.state.schedule[sessionTime]._id} />
-							: null
+							: <UserScheduleItem auth={this.props.auth} session_time ={sessionTime} session_name={blankSession.title}/>
 					    }
 
             		</ul>
