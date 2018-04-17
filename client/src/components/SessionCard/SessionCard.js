@@ -51,7 +51,7 @@ class SessionCard extends Component {
                 {this.state.sessions.map(session => (
                     // <SessionCard session={session} /> */}
                     <div className="col" >
-                        <div className="card" style={{width: 240, height: 510}} >
+                        <div className="card" style={{width: 240, height: 530}} >
 
                             <div className="img-container" style= {{backgroundColor: "rgb(195, 235, 229" }}>
                                 <img alt="Testing" src={this.props.session.speaker_photo ? this.props.session.speaker_photo : defaultPhoto} style= {{width: 238, height: 240}} />
@@ -66,8 +66,8 @@ class SessionCard extends Component {
                             </div>
                             
                             <div className="card-body lower">
-                                <button href="#" className="card-link">View Details</button>
-                                <button onClick={(event)=> this.handleSubmit(event,this.props.session._id)} className="card-link">Add to schedule</button>
+                                <button href="#" className="btn btn-info btn-sm btn-block">View Details</button>
+                                <button onClick={(event)=> this.handleSubmit(event,this.props.session._id)} className="btn btn-info btn-sm btn-block">Add to schedule</button>
                             </div>
 
                         </div>

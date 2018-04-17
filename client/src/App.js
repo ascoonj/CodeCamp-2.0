@@ -10,7 +10,7 @@ import Home from "./components/Home";
 import Welcome from "./components/Welcome";
 import Main from "./components/Main";
 import NewSessionForm from "./components/NewSessionForm";
-
+import ScheduleSidebar from "./components/ScheduleSidebar";
 
 class App extends Component {
   state = {
@@ -22,7 +22,7 @@ class App extends Component {
     auth: {
       userId:"",
       username:"",
-      isAuthenticated:false
+      isAuthenticated:false      
     }
   };
 
@@ -87,7 +87,8 @@ class App extends Component {
         auth:{
           userId: "",
           username: "",
-          isAuthenticated: false
+          isAuthenticated: false,
+          first_name:""
         }
       });
     })

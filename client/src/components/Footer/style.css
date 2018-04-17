@@ -1,0 +1,14 @@
+footer {
+    text-align: center;
+    background-color:yellow;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: rgb(42, 137, 192);
+    font-weight: bold;
+    font-style: italic;
+    height: 60px;
+    width:  100%;
+    border-top: 2px solid;
+    border-top-color:rgb(195, 235, 229);
+    padding-top: 15px;
+}

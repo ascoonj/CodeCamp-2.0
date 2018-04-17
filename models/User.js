@@ -8,6 +8,7 @@ const User = new Schema({
 	reg_type: {type: String, required: true},
 	email: {type: String, match: [/.+@.+\..+/, "Please enter a valid e-mail address"]},
 	schedule: { 
+		// "title": {type: String, required: true, defaultValue: "scheduleTitle"},
 		"09:00": {type: Schema.Types.ObjectId, ref: "Session"},
 		"10:00": {type: Schema.Types.ObjectId, ref: "Session"},
 		"11:00": {type: Schema.Types.ObjectId, ref: "Session"},

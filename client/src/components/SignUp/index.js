@@ -20,10 +20,24 @@ const SignUp = (props)=> {
 				{/* <label>Password</label><br/> */}
 				<input name='password' type='password' className='form-control' value = {props.password} onChange = {props.handleChange} placeholder = 'password' />
 			</div>
-			<div className="form-group">
+			{/* <div className="form-group"> */}
 				{/* <label>Password</label><br/> */}
-				<input name='reg_type' type='text' className='form-control' value = {props.reg_type} onChange = {props.handleChange} placeholder = 'registration type' />
-			</div>
+				{/* <input name='reg_type' type='text' className='form-control' value = {props.reg_type} onChange = {props.handleChange} placeholder = 'registration type' />
+			</div> */}
+
+			<div className="form-group">
+				{/* <label htmlFor="reg_type">registration type</label> */}
+				<select name = 'reg_type' className="form-control" value = {props.reg_type} onChange = {props.handleChange} placeholder='registration type'>
+					<option value="" selected disabled>registration type</option>
+					<option>attendee</option>
+					<option>speaker</option>
+					<option>sponsor</option>
+					<option>admin</option>
+				</select>
+			</div>	
+
+
+
 			<div className="form-group">
 				{/* <label>Password</label><br/> */}
 				<input name='first_name' type='text' className='form-control' value = {props.first_name} onChange = {props.handleChange} placeholder = 'first name' />

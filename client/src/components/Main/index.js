@@ -4,7 +4,7 @@ import ScheduleSidebar from "../ScheduleSidebar";
 import Jumbotron from "../Jumbotron";
 import SessionContainer from "../SessionContainer";
 import UserSchedule from "../UserSchedule";
-
+import Footer from "../Footer";
 
 import "./style.css";
 
@@ -14,8 +14,8 @@ import "./style.css";
 const Main = (props) => {
 	return(
 		<div>
-			<Nav />
-			{/* <ScheduleSidebar/> */}
+			<Nav auth={props.auth}/>
+			
 			<Jumbotron>
 				<h2 className="display-4">Orlando Codecamp 2018 | March 17th, 2018</h2>
 				<p className="lead" style = {{color: "gray"}}>The 13th annual conference is hosted by the Orlando .NET User Group at Seminole State College, Sanford</p>
@@ -25,6 +25,8 @@ const Main = (props) => {
             </Jumbotron>
     		<SessionContainer auth={props.auth}/>
 			{props.auth.isAuthenticated && <UserSchedule auth={props.auth}/>}
+			<Footer/>
+			
 		</div>
 	);
 }

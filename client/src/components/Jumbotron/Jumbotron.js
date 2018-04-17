@@ -5,6 +5,8 @@ const Jumbotron = ({ children }) => (
     clear: "both", 
     backgroundColor: "rgb(195, 235, 229", 
     fontFamily: "'Kaushan Script', cursive", 
+    fontSize: "medium",
+    // fontStyle: "italic",
     padding: "30px 0px", 
     margin: "0" 
     }} className="jumbotron jumbotron-fluid">
